@@ -1,5 +1,4 @@
-# java-collections-examples
-# Projeto de Estudos Java
+# Java-Collections-Examples
 
 ## Descrição
 

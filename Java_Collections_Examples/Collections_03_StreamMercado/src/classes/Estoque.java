@@ -58,4 +58,9 @@ public class Estoque {
   public List<Produto> buscarProdutosMaiorQue10() {
     return produtos.stream().filter(p -> p.getPreco() > 10).collect(Collectors.toList());
   }
+
+  @Override
+  public String toString() {
+    return "Estoque Produtos:" + produtos + "\n";
+  }
 }

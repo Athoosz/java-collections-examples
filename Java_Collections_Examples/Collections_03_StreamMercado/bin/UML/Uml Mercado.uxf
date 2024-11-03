@@ -1,0 +1,37 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>220</x><y>160</y><w>210</w><h>130</h></coordinates><panel_attributes>/Produto/
+--
+_- MAX_ESTOQUE : int_
+- Nome : String
+- Preço : double
+- Quantidade : int
+- DataDeFabricaçao : LocalDate
+--
++ ToString() : String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>380</y><w>210</w><h>90</h></coordinates><panel_attributes>Alimento
+--
+- DataDeValidade : LocalDate
+--
++ ToString() : String
++ isVencido() : boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>380</y><w>250</w><h>90</h></coordinates><panel_attributes>Eletronico
+--
+- garantiaMeses : int
+--
++ ToString() : String
++ calcularGarantiaEstendida() : LocalDate
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>280</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;100</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>280</y><w>110</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>150</y><w>280</w><h>190</h></coordinates><panel_attributes>Estoque
+--
+- produtos : List&lt;Produto&gt;
+--
++ adicionarProduto(Produto)
++ removerProduto(Produto)
++ ordenarProdutosPorNome() : List&lt;Produto&gt;
++ ordenarProdutosPorPreco() : List&lt;Produto&gt;
++ calcularValorMedia() : double
++ calcularQuantidadeTotal() : int
++ buscarProdutoPorNome(String) : Produto
++ buscarProdutosMaiorQue10() : List&lt;Produto&gt;
++ toString() : String
+ 
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>230</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element></diagram>
